@@ -112,9 +112,11 @@ dokku mariadb:link lolipop playground
 # and the following will be set on the linked application by default
 #
 #   DATABASE_URL=mysql://mariadb:SOME_PASSWORD@dokku-mariadb-lolipop:3306/lolipop
+#   JDBC_DATABASE_URL=mysql://dokku-mariadb-lolipop:3306/lolipop?user=mariadb&password=SOME_PASSWORD
 #
 # NOTE: the host exposed here only works internally in docker containers. If
 # you want your container to be reachable from outside, you should use `expose`.
+# As well, we shall omit the JDBC url from all following examples for brevity.
 
 # another service can be linked to your app
 dokku mariadb:link other_service playground
